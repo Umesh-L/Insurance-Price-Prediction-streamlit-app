@@ -1,6 +1,7 @@
 # create environment : python -m venv myenv
 # activate environment : myenv\Scripts\activate
 # install all libraries : pip install streamlit pandas numpy seaborn matplotlib scikit-learn
+# to run the code : streamlit run app.py
 
 import pickle
 import pandas as pd
@@ -16,7 +17,7 @@ model = pickle.load(open('model_gb.pkl','rb'))
 # scaling
 scaler = MinMaxScaler()
 # give title
-st.title("Insurance premium price prediction app")
+st.title("Insurance Premium Price Prediction App")
 
 age = st.number_input('Age',min_value=1, max_value=100, value=25)
 gender = st.selectbox('Gender',('male','female'))
